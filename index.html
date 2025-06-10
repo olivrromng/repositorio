@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Una cuenta hasta el 18</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="matrixCanvas"></canvas>
+
+
+  <h1 class="titulo">8 días hasta cumplir un mes juntos</h1>
+
+  <div class="calendario">
+    <!-- Días se generan dinámicamente en JS -->
+  </div>
+
+  <!-- Modal de carta -->
+  <div id="modal-carta" class="modal">
+    <div class="modal-contenido">
+      <span id="cerrar-modal" class="cerrar">&times;</span>
+      <div class="carta">
+        <h2 id="modal-titulo"></h2>
+        <p id="modal-mensaje"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+<p>Aunque no fui yo quien lo hizo todo, inverti mi tiempo en tratar de hacer esto para ti. Te amo mimi, mi amor, mi reina, mi princesa. Te amo con todo mi ser.</p>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js")
+        .then(reg => console.log("Service Worker registrado", reg))
+        .catch(err => console.log("Fallo en el registro del Service Worker", err));
+    });
+  }
+</script>
+
+</body>
+</html>
